@@ -32,7 +32,7 @@
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
-\usepackage[scale=0.78]{geometry} % Reduce document margins
+\usepackage[scale=0.8]{geometry} % Reduce document margins
 
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
@@ -53,12 +53,20 @@
 %\fax{(000) 111 1113}
 \email{alzugaray.ign@gmail.com}
 
-\homepage{ialzugaray.github.io/}{Webpage} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\homepage{ialzugaray.github.io/}{Webpage: ialzugaray.github.io} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
 
 
 
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+	\uline{\phantom{#1}}%
+	\llap{\contour{white}{#1}}%
+}
 
 
 %----------------------------------------------------------------------------------------
@@ -106,25 +114,51 @@
 %International student exchange in ETH Zürich (Switzerland)	Feb2016-Aug2016
 %Supervised by Prof. Margarita Chli. Mark 5.75 / 6.
 
+\newcommand{\location}[1]{\small{#1}}
+\newcommand{\duration}[2]{\footnotesize{#1 -- #2}}
+
+\newcommand{\publication}[6]{
+\cventry{[#1]}{}{}{}{}{
+	\small{#2.}\\
+	\small{\textbf{#3.}}\\
+	\small{\textit{#4}, #5}. \small{#6}
+}}
+
+\newcommand{\bmvc}{British Machine Vision Conference ({BMVC})}
+\newcommand{\threedv}{International Conference on 3D Vision ({3DV})}
+%\newcommand{\iros}{Proceedings of the {IEEE/RSJ} Conference on Intelligent Robots and Systems ({IROS})}
+\newcommand{\iros}{{IEEE/RSJ} Conference on Intelligent Robots and Systems ({IROS})}
+%\newcommand{\icra}{Proceedings of the {IEEE} International Conference on Robotics and Automation ({ICRA})}
+\newcommand{\icra}{{IEEE} International Conference on Robotics and Automation ({ICRA})}
+\newcommand{\ral}{{IEEE} Robotics and Automation Letters ({RA-L})}
+
+
 \section{Education}
 
 
-\cventry{Present 02/2017}{PhD. Candidate}{}{}{}{\textit{ETH Z\"urich -- Vision for Robotics Lab (V4RL), Switzerland}\\ Asynchronous Event-based SLAM for Real-Time Robotic Applications.\\ Supervisor: Prof. Margarita Chli.}{
+\cventry{\small{Feb'17-Present}}{PhD. Candidate}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{ Asynchronous Event-based SLAM for Real-Time Robotic Applications.
+	\begin{itemize}
+		\item 	Advisor: Prof. Dr. Margarita Chli.
+	\end{itemize}
 }
 
-\cventry{2016}{Master Degree with honors in Automatic Control and Robotics}{}{}{}{Polytechnic University of Catalonia (UPC), Spain. \textit{GPA -- 8.70/10}\\
-Top student in Master's degree program (2014-2016).\\
- Master Thesis: \textit{Path planning for MAVs with vision in the loop.}\\
- - Advisor: Prof. Margarita Chli. Grade: 5.75/6. ETH Z\"urich -- International student exchange.\\
- - Accepted as a paper in the \textit{International Conference on Robotics and Automation}  (ICRA 2017).
+\cventry{\small{2016}}{M.Sc. Automatic Control and Robotics}{\location{Polytechnic University of Catalonia (UPC)}}{}{}{
+Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
+ Graduate Thesis: \textit{Path planning for MAVs with vision in the loop.}
+	\begin{itemize}
+ 	\item 	Advisor: Prof. Dr. Margarita Chli. Grade: 5.75/6. ETH Z\"urich -- International student exchange.
+ 	\item 	Accepted as a paper in the \textit{International Conference on Robotics and Automation}  (ICRA 2017).
+ \end{itemize}
 }
 
-% The name of the title may change: Mechanical / Electrical / Industrial Engineering
-\cventry{2014}{Bachelor Degree with honors in Industrial Engineering}{}{}{}{University of Malaga (UMA), Spain. \textit{GPA -- 8.49/10}\\
-Top student in Bachelor's degree program (2010-2014). Best Bachelor Thesis' Award.\\
- Thesis: \textit{Teleoperation of Robotic Manipulators applied to Laparoscopic Surgery.}\\
- \, - Advisor: Dr. Carlos Perez del Pulgar. Grade: 9.5/10. 
+\cventry{\small{2014}}{B.Sc. Industrial Engineering}{\location{University of Malaga (UMA)}}{}{}{Top student in Bachelor's program (2010-2014). GPA -- 8.49/10.\\
+ Undergraduate Thesis: \textit{Teleoperation of Robotic Manipulators applied to Laparoscopic Surgery.}
+ 	\begin{itemize}
+\item Advisor: Dr. Carlos Perez del Pulgar. Grade: 9.5/10. 
+ 	\end{itemize}
 }
+
+
 
 
 %\section{Masters Thesis}
@@ -142,29 +176,42 @@ Top student in Bachelor's degree program (2010-2014). Best Bachelor Thesis' Awar
 %----------------------------------------------------------------------------------------
 \section{Experience}
 %\subsection{Research Experience}
-\cventry{Present}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, CVPR, MVA, RA-L, IJCV.}{
+\cventry{\duration{Sep'19}{Dec'19}}{Software Engineer Intern}{\location{Disney Research Zurich}}{}{}{
+	\begin{itemize}
+		\item Development of animation tools in VR environments with hand tracking and gesture recognition.
+		\item Close collaboration with Disney Animation Studio on \httplink[\color{blue}PoseVR project]{www.disneyanimation.com/technology/posevr/}.
+		\item Supervisors: Dr. Jakob Buhmann and Dr. Martin Guay.
+	\end{itemize}
+	}{}
+
+
+\cventry{\duration{Sep'16}{Feb'17}}{Research Assistant}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
+	\begin{itemize}
+		\item Implementation of probabilistic event-based scene mapping.
+		\item Design of active monocular-inertial SLAM pipeline for UAVs.
+		\item Supervisor: Prof. Dr. Margarita Chli.
+	\end{itemize}
 }
 
-\cventry{12/2019 09/2019}{Software Engineer Intern}{}{}{}{\textit{Disney Research, Zurich} \\
-	Development of animation tools employing hand tracking and gesture recognition in VR.
-	}{
-}
-
-
-
-\cventry{02/2017 09/2016}{Research Assistant}{}{}{}{\textit{ETH Z\"urich -- Vision for Robotics Lab (V4RL), Switzerland}\\Research on CPU-only mapping with event-based cameras and active monocular-inertial SLAM.%\\ Supervisor: Prof. Margarita Chli.}{
-}
-
-\cventry{02/2016 06/2015}{Research Assistant Intern}{}{}{}{\textit{Institute of Robotics and Industrial Informatics (IRI - UPC - CSIC), Spain} \\Research on improvement of path planning algorithms learning form expert pilots' experience.\\ Paper accepted in International Conference on Intelligent Robots and Systems (IROS 2016).
-\\Supervisor: Prof. Alberto Sanfeliu.}{
-}
-
-
-
-% Original place name: 
-\cventry{07/2014 10/2013}{Undergraduate Research Assistant}{}{}{}{\textit{Andalusian Institute of Advanced Automation and Robotics (IA3R), Spain} \\Research on trajectory control algorithms for robotic arms applied to laparoscopic surgery.\\Supervisor: Dr. Carlos Perez del Pulgar.
+\cventry{\duration{Jun'15}{Feb'16}}{Research Assistant Intern}{\location{Institute of Robotics and Industrial Informatics (IRI-CSIC)}}{}{}{
+	\begin{itemize}
+		\item Design of path planning algorithms for UAVs embedding the experience of expert pilots.
+		\item Accepted paper in the International Conference on Intelligent Robots and Systems (IROS 2016).
+		\item Supervisor: Prof. Dr. Alberto Sanfeliu.
+	\end{itemize}
 }{
 }
+
+
+\cventry{\duration{Oct'13}{Jul'14}}{Undergraduate Research Assistant}{\location{
+		Instituto Andaluz de Autom\'atica Avanzada y Rob\'otica}}{}{}{
+	\begin{itemize}
+	\item Design of trajectory control algorithms for robotic manipulators applied to laparoscopic surgery.
+	\item Supervisor: Dr. Carlos Perez del Pulgar.
+\end{itemize}
+}{
+}
+
 
 %\subsection{Teaching Experience}
 
@@ -175,7 +222,7 @@ Top student in Bachelor's degree program (2010-2014). Best Bachelor Thesis' Awar
 
 %\cventry{07/2015 01/2015}{Teaching Assistant Intern}{}{}{}{\textit{Polytechnic University of Catalonia (UPC), Spain}\\Department of Mechanical Engineering and Department of Thermal Engines and Machines. Creation, updating and maintenance of digital content for new courses.}{}
 
-\cventry{09/2013 07/2013}{Undergraduate Teaching Assistant Intern}{}{}{}{\textit{Department of Applied Mathematics. University of Malaga (UMA), Spain}\\Simulation of numerical methods applied to differential equations for teaching purposes.\\Supervisor: Prof. Jose Manuel Gonzalez Vida.}{}
+%\cventry{Sep 2013\\Jul 2013}{Undergraduate Teaching Assistant Intern}{}{}{}{\textit{Department of Applied Mathematics. University of Malaga (UMA), Spain}\\Simulation of numerical methods applied to differential equations for teaching purposes.\\Supervisor: Prof. Jose Manuel Gonzalez Vida.}{}
 
 %\cventry{07/2012 02/2012}{Undergraduate Electronic Lab Assistant}{}{}{}{\textit{Department of Electronics. University of Malaga (UMA), Spain}\\ Teaching support during students' practices and maintenance of electronic equipment.}{}
 
@@ -187,83 +234,79 @@ Top student in Bachelor's degree program (2010-2014). Best Bachelor Thesis' Awar
 
 %\cventry{05/2012 09/2011}{Member of Student's Group UMA TROTA Electric}{}{}{}{\textit{Department of of Electronics. University of Malaga (UMA)}\\ Evaluation of control strategies applied to electric powered vehicles for competition.}{}
 
+
+\subsection{Research and Dissemination Activities}
+
+\cventry{\small{Present}}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, CVPR, MVA, T-RO, RA-L, IJCV.}{
+}
+
+\cvitem{\small{Oct'18}}{\textbf{Invited Speaker} at the \textit{Unconventional Sensing and Processing for Robotic Visual Perception} workshop, IROS 2018.}
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Awards and Scholarships}
 
-\cventry{2016}{Best Master's Degree Academic Record (2014-2016)}{}{}{}{\textit{Polytechnic University of Catalonia (UPC), Spain}\\ Award granted to the  student with the top academic performance during the Master's degree program according. The recipient is granted with an internship sponsored by KUKA AG.}{
+
+\cventry{\small{2016}}{{Award for Academic Performance in Master's}}{\location{Polytechnic University of Catalonia (UPC)}}{}{}{
+Granted to the top performing student in postgraduate programme (2014--2016). The recipient is granted with an internship sponsored by KUKA AG.}{
 }
 
-\cventry{2016}{International Student Scholarship}{}{}{}{\textit{ETH Z\"urich, Switzerland. Swiss-European Mobility Programme.}\\ Competitive scholarship granted to students in an international exchange programme.}{
+\cventry{\small{2016}}{International Student Scholarship}{\location{ETH Z\"urich, Swiss-European Mobility Programme}}{}{}{Competitive scholarship granted to students in an international exchange programme.}{
 }
 
-\cventry{2014}{Excellence Scholarship in Master's Programme}{}{}{}{\textit{Polytechnic University of Catalonia (UPC) and Catalunya-La Pedrera Foundation, Spain.}\\ Two-years scholarship granted to the student with the best academic record applying to a Master's degree program.}{
+\cventry{\small{2014}}{Excellence Scholarship in Master's Programme}{\location{ Catalunya-La Pedrera Foundation}}{}{}{ Two-years scholarship granted to the Master's program applicant with the best academic record.}{
 }
 
 
-\cventry{2014}{Best Graduate Academic Record and Best Bachelor's Thesis (2010--2014)}{}{}{}{\textit{University of Malaga (UMA), Spain.}\\ Award granted to the top student in the  Bacherlor's Degree program according to academic performance and quality of the undergraduate thesis.}{
+\cventry{\small{2014}}{Award for Academic Performance in Bacherlor's}{\location{University of Malaga (UMA)}}{}{}{ Granted to the top performing student in undergraduate programme (2010--2014).}{
 }
 
-%\cventry{2013}{Undergraduate Research Scholarship}{}{}{}{\textit{University of Malaga (UMA) and Spanish Ministry of Education, Spain.}\\ Competitive national six-months scholarship to conduct short research projects granted to undergraduate students with high academic performance.}{}
+\cventry{\small{2013}}{Undergraduate Research Scholarship}{\location{University of Malaga, Spanish Ministry of Education}}{}{}{
+	 Nationally competitive six-months scholarship to conduct short research projects.}{
+}
 
 
-\section{Selected Publications}
+\section{Peer-reviewed Publications}
+
+\publication{\httplink[\color{blue}C7]{www.bmvc2020-conference.com/conference/papers/paper_0744.html}}{\myuline{I. Alzugaray} and M. Chli}{{HASTE}: multi-Hypothesis Asynchronous Speeded-up Tracking of Events}{\bmvc}{Virtual, 2020}{}
 
 
+\publication{\httplink[\color{blue}J2]{doi.org/10.1016/j.ymssp.2020.106905}}{Z. Lai, \myuline{I. Alzugaray}, M. Chli and E. Chatzi}{Full-field structural monitoring using event cameras and physics-informed sparse identification}{Mechanical Systems and Signal Processing}{2020}{}
 
-\cvitem{[C5]}{I. Alzugaray and M. Chli. \textbf{
-		{HASTE}: multi-Hypothesis Asynchronous Speeded-up Tracking of Events}. In \textit{British Machinve Vision Conference ({BMVC})}, 2020.}
-
-
-\cvitem{[C4]}{I. Alzugaray and M. Chli. \textbf{
-Asynchronous Multi-hypothesis Tracking of features with Event Cameras}. In \textit{International Conference on 3D Vision ({3DV})}. Quebec, Canada, 2019. Oral presentation.}
+\publication{\httplink[\color{blue}C6]{doi.org/10.1109/IROS45743.2020.9341208}}{
+C. Le Gentil, F. Tschopp, \myuline{I. Alzugaray}, T. Vidal-Calleja, R. Siegwart and J. Nieto}{
+	IDOL: A framework for IMU-DVS odometry using lines}{\iros}{Las Vegas, NV, USA, 2020}{}
 
 
-\cvitem{[C3]}{I. Alzugaray and M. Chli. \textbf{
-{ACE}: An Efficient Asynchronous Corner Tracker for Event Cameras}. In \textit{International Conference on 3D Vision ({3DV})}. Verona, Italy, 2018.}
+\publication{\httplink[\color{blue}C5]{doi.org/10.3929/ethz-b-000360434}}{\myuline{I. Alzugaray} and M. Chli}{Asynchronous Multi-hypothesis Tracking of features with Event Cameras}{\threedv}{Quebec, Canada, 2019}{Oral presentation.}
 
 
-\cvitem{[J1]}{I. Alzugaray and M. Chli. \textbf{Asynchronous Corner Detection and Tracking for Event Cameras in Real Time}. In \textit{{IEEE} Robotics and Automation Letters  ({RA-L})}, 2018.}
+\publication{\httplink[\color{blue}C4]{doi.org/10.3929/ethz-b-000291763}}{\myuline{I. Alzugaray} and M. Chli}{{ACE}: An Efficient Asynchronous Corner Tracker for Event Cameras}{\threedv}{Verona, Italy, 2018}{}
 
 
-%\cvitem{[C3]}{L. Teixeira, I. Alzugaray and M. Chli. \textbf{Autonomous Aerial Inspection Using Visual-Inertial Robust Localization and Mapping}. In \textit{Conference on Field and Service Robotics ({FSR})}. Zurich, Switzerland, 2017.}
-
-	
-\cvitem{[C2]}{I. Alzugaray, L. Texeira and M. Chli. \textbf{Short-term UAV Path-Planning with Monocular-Inertial SLAM in the Loop}. In \textit{Proceedings of the {IEEE} International Conference on Robotics and Automation ({ICRA})}. Singapore, 2017.}
+\publication{\httplink[\color{blue}J1]{doi.org/10.3929/ethz-b-000277131}}{\myuline{I. Alzugaray} and M. Chli}{Asynchronous Corner Detection and Tracking for Event Cameras in Real Time}{\ral}{2018}{}
 
 
-\cvitem{[\httplink[\color{black}C1]{www.iri.upc.edu/files/scidoc/1779-Learning-the-Hidden-Human-Knowledge-of-UAV-Pilots-when-navigating-in-a-cluttered-environment-for-improving-Path-Planning.pdf}]}{I. Alzugaray and A. Sanfeliu.\textbf{ Learning the Hidden Human Knowledge of UAV Pilots when navigating in a cluttered environment for improving Path Planning}. In \textit{Proceedings of the {IEEE/RSJ} Conference on Intelligent Robots and Systems ({IROS})}. Daejeon, Korea, 2016.}
+\publication{\httplink[\color{blue}C3]{doi.org/10.1007/978-3-319-67361-5_13}}{L. Texeira, \myuline{I. Alzugaray} and M. Chli}{Autonomous Aerial Inspection Using Visual-Inertial Robust Localization and Mapping}{Conference on Field and Service Robotics ({FSR})}{Zurich, Switzerland, 2017}{}
 
 
+\publication{\httplink[\color{blue}C2]{doi.org/10.3929/ethz-a-010862339}}{\myuline{I. Alzugaray}, L. Texeira and M. Chli}{Short-term UAV Path-Planning with Monocular-Inertial SLAM in the Loop}{\icra}{Singapore, 2017}{}
 
-
-
-
-%\cvitem{2016}{Best Master's Degree Academic Record (2014--2016). \textit{Polytechnic University of Catalonia (UPC), ETSEIB.} Sponsored by KUKA ROBOTS.}
-
-%\cvitem{2015}{International Student Scholarship in ETH Z\"urich. \textit{Swiss-European Mobility Programme.}}
-
-
-%\cvitem{2014}{Excellence scholarship in Master's Programme. \textit{Catalunya-La Pedrera Foundation}.}
-
-%\cvitem{2014}{Best Graduate Academic Record and Best Bachelor's Thesis (2010--2014). \textit{University of Malaga (UMA), ETSII.}}
-
-%\cvitem{2013}{Competitive Undergraduate Research Fellowship.\textit{Spanish Ministry of Education}.}
+\publication{\httplink[\color{blue}C1]{www.iri.upc.edu/files/scidoc/1779-Learning-the-Hidden-Human-Knowledge-of-UAV-Pilots-when-navigating-in-a-cluttered-environment-for-improving-Path-Planning.pdf}}{\myuline{I. Alzugaray} and A. Sanfeliu}{Learning the Hidden Human Knowledge of UAV Pilots when navigating in a cluttered environment for improving Path Planning}{\iros}{Daejeon, Korea, 2016}{}
 
 
 \section{Languages}
 
 \cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{Fluent}{B2.2 University of Cambridge (2013)}
+\cvitemwithcomment{English}{Working proficiency}{B2.2 University of Cambridge (2013)}
 \cvitemwithcomment{German}{Intermediate}{B1.1 University of Z\"urich (2017)}
 
 
 \section{Skills}
 
-\cvitem{Languages}{C++, \textsc{Matlab}, C\#, Python, \textsc{Simulink}, \LaTeX}
-\cvitem{Frameworks} {ROS, Unity, PyTorch, OpenCV, Gazebo, Git}
+\cvitem{Languages}{C++, \textsc{Matlab}, Python, C\#, \textsc{Simulink}, \LaTeX}
+\cvitem{Frameworks} {ROS, OpenCV, PyTorch, Unity, Unreal Engine, Gazebo, Git}
 %\cvitem{Machine Learning}{Pytorch,Tensorflow}
 %\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
 
