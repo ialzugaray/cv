@@ -115,7 +115,7 @@
 %Supervised by Prof. Margarita Chli. Mark 5.75 / 6.
 
 \newcommand{\location}[1]{\small{#1}}
-\newcommand{\duration}[2]{\footnotesize{#1 -- #2}}
+\newcommand{\duration}[2]{\footnotesize{#1 - #2}}
 
 \newcommand{\publication}[6]{
 \cventry{[#1]}{}{}{}{}{
@@ -136,9 +136,12 @@
 \section{Education}
 
 
-\cventry{\small{Feb'17-Present}}{PhD. Candidate}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{ Asynchronous Event-based SLAM for Real-Time Robotic Applications.
+\cventry{\small{Feb'17-Present}}{PhD. Candidate}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{ 
+	%Asynchronous Event-based SLAM for Real-Time Robotic Applications.
+	Thesis: \textit{Event-driven Feature Detection and Tracking for Visual SLAM}.
 	\begin{itemize}
 		\item 	Advisor: Prof. Dr. Margarita Chli.
+		\item Examiners: Prof. Dr. Andrew Davison, Prof. Dr. Davide Scaramuzza, Prof. Dr. Lauren Kneip.
 	\end{itemize}
 }
 
@@ -161,14 +164,6 @@ Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
 
 
 
-%\section{Masters Thesis}
-%
-%\cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
-%\cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
-%\cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
-
-
-
 
 
 %----------------------------------------------------------------------------------------
@@ -176,9 +171,17 @@ Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
 %----------------------------------------------------------------------------------------
 \section{Experience}
 %\subsection{Research Experience}
+\cventry{\duration{Sep'21}{Dec'21}}{Research Scientist Intern}{\location{Facebook/Meta Reality Labs}}{}{}{
+	\begin{itemize}
+		\item Designing of a NeRF-based pipeline for image-based visual relocalization.
+		\item PyTorch implementation trained with real egocentric footage for AR applications.
+		\item Supervisor: Dr. Vasileios Balntas.
+	\end{itemize}
+}{}
+
 \cventry{\duration{Sep'19}{Dec'19}}{Software Engineer Intern}{\location{Disney Research Zurich}}{}{}{
 	\begin{itemize}
-		\item Development of animation tools in VR environments with hand tracking and gesture recognition.
+		\item Development of VR animation tools with hand tracking and gesture recognition within Unity.
 		\item Close collaboration with Disney Animation Studio on \httplink[\color{blue}PoseVR project]{www.disneyanimation.com/technology/posevr/}.
 		\item Supervisors: Dr. Jakob Buhmann and Dr. Martin Guay.
 	\end{itemize}
@@ -237,10 +240,10 @@ Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
 
 \subsection{Research and Dissemination Activities}
 
-\cventry{\small{Present}}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, CVPR, MVA, T-RO, RA-L, IJCV.}{
-}
+%\cventry{\small{Present}}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, CVPR, MVA, RSS, T-RO, T-PAMI, RA-L, IJCV.}{}
 
-\cvitem{\small{Oct'18}}{\textbf{Invited Speaker} at the \textit{Unconventional Sensing and Processing for Robotic Visual Perception} workshop, IROS 2018.}
+\cvitem{\small{Jun'21}}{\textbf{Invited Speaker} at the \textit{Event-based Vision} workshop, CVPR 2021. Presentation title: ``Towards Asynchronous SLAM with Event Cameras.''}
+\cvitem{\small{Oct'18}}{\textbf{Invited Speaker} at the \textit{Unconventional Sensing and Processing for Robotic Visual Perception} workshop, IROS 2018. Presentation title: ``Asynchronous Vision.''}
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
@@ -262,12 +265,27 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 \cventry{\small{2014}}{Award for Academic Performance in Bacherlor's}{\location{University of Malaga (UMA)}}{}{}{ Granted to the top performing student in undergraduate programme (2010--2014).}{
 }
 
-\cventry{\small{2013}}{Undergraduate Research Scholarship}{\location{University of Malaga, Spanish Ministry of Education}}{}{}{
-	 Nationally competitive six-months scholarship to conduct short research projects.}{
-}
+\cventry{\small{2013}}{Undergraduate Research Scholarship}{\location{University of Malaga, Spanish Ministry of Education}}{}{}{	 Nationally competitive six-months scholarship to conduct short research projects.}{}
+
+
+\section{Skills}
+%\section{Languages}
+\cvitem{Languages}{\textbf{Spanish:} Native \hfill \textbf{English:} Professional Proficiency \hfill \textbf{German:} Basic}
+%\cvitemwithcomment{English}{Professional Proficiency}{B2.2 University of Cambridge (2013)}
+%\cvitemwithcomment{German}{Intermediate}{B1.1 University of Z\"urich (2017)}
+
+
+%\section{Skills}
+
+\cvitem{Programming}{C++, \textsc{Matlab}, Python, C\#, \textsc{Simulink}, \LaTeX}
+\cvitem{Frameworks} {PyTorch, ROS, Unity, OpenCV, Unreal Engine, Gazebo, Git}
+%\cvitem{Machine Learning}{Pytorch,Tensorflow}
+%\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
 
 
 \section{Peer-reviewed Publications}
+
+%\publication{C8}{	\myuline{I. Alzugaray}$^{*}$, A. Schneebeli$^{*}$, R. Mascaro, A. Sabater, A.C. Murillo and M. Chli}{Graph Neural Networks for Corner Detection with Event Cameras}{\icra}{2022}{\textit{Under Review.}}
 
 \publication{\httplink[\color{blue}C7]{www.bmvc2020-conference.com/conference/papers/paper_0744.html}}{\myuline{I. Alzugaray} and M. Chli}{{HASTE}: multi-Hypothesis Asynchronous Speeded-up Tracking of Events}{\bmvc}{Virtual, 2020}{}
 
@@ -275,7 +293,7 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 \publication{\httplink[\color{blue}J2]{doi.org/10.1016/j.ymssp.2020.106905}}{Z. Lai, \myuline{I. Alzugaray}, M. Chli and E. Chatzi}{Full-field structural monitoring using event cameras and physics-informed sparse identification}{Mechanical Systems and Signal Processing}{2020}{}
 
 \publication{\httplink[\color{blue}C6]{doi.org/10.1109/IROS45743.2020.9341208}}{
-C. Le Gentil, F. Tschopp, \myuline{I. Alzugaray}, T. Vidal-Calleja, R. Siegwart and J. Nieto}{
+	C. Le Gentil, F. Tschopp, \myuline{I. Alzugaray}, T. Vidal-Calleja, R. Siegwart and J. Nieto}{
 	IDOL: A framework for IMU-DVS odometry using lines}{\iros}{Las Vegas, NV, USA, 2020}{}
 
 
@@ -294,22 +312,6 @@ C. Le Gentil, F. Tschopp, \myuline{I. Alzugaray}, T. Vidal-Calleja, R. Siegwart 
 \publication{\httplink[\color{blue}C2]{doi.org/10.3929/ethz-a-010862339}}{\myuline{I. Alzugaray}, L. Texeira and M. Chli}{Short-term UAV Path-Planning with Monocular-Inertial SLAM in the Loop}{\icra}{Singapore, 2017}{}
 
 \publication{\httplink[\color{blue}C1]{www.iri.upc.edu/files/scidoc/1779-Learning-the-Hidden-Human-Knowledge-of-UAV-Pilots-when-navigating-in-a-cluttered-environment-for-improving-Path-Planning.pdf}}{\myuline{I. Alzugaray} and A. Sanfeliu}{Learning the Hidden Human Knowledge of UAV Pilots when navigating in a cluttered environment for improving Path Planning}{\iros}{Daejeon, Korea, 2016}{}
-
-
-\section{Languages}
-
-\cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{Working proficiency}{B2.2 University of Cambridge (2013)}
-\cvitemwithcomment{German}{Intermediate}{B1.1 University of Z\"urich (2017)}
-
-
-\section{Skills}
-
-\cvitem{Languages}{C++, \textsc{Matlab}, Python, C\#, \textsc{Simulink}, \LaTeX}
-\cvitem{Frameworks} {ROS, OpenCV, PyTorch, Unity, Unreal Engine, Gazebo, Git}
-%\cvitem{Machine Learning}{Pytorch,Tensorflow}
-%\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
-
 
 
 
