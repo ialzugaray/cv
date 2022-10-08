@@ -135,33 +135,6 @@
 \newcommand{\ral}{{IEEE} Robotics and Automation Letters ({RA-L})}
 
 
-\section{Education}
-
-
-\cventry{\small{2022}}{Ph.D. in Computer Vision}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{ 
-	%Asynchronous Event-based SLAM for Real-Time Robotic Applications.
-	Thesis: \textit{Event-driven Feature Detection and Tracking for Visual SLAM}.
-	\begin{itemize}
-		\item 	Advisor: Prof. Dr. Margarita Chli.
-		\item Examiners: Prof. Dr. Andrew Davison, Prof. Dr. Davide Scaramuzza, Prof. Dr. Laurent Kneip.
-	\end{itemize}
-}
-
-\cventry{\small{2016}}{M.Sc. Automatic Control and Robotics}{\location{Polytechnic University of Catalonia (UPC)}}{}{}{
-Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
- Graduate Thesis: \textit{Path planning for MAVs with vision in the loop.}
-	\begin{itemize}
- 	\item 	Advisor: Prof. Dr. Margarita Chli. Grade: 5.75/6. ETH Z\"urich -- International student exchange.
- 	\item 	Accepted as a paper in the \textit{International Conference on Robotics and Automation}  (ICRA 2017).
- \end{itemize}
-}
-
-\cventry{\small{2014}}{B.Sc. Industrial Engineering}{\location{University of Malaga (UMA)}}{}{}{Top student in Bachelor's program (2010-2014). GPA -- 8.49/10.\\
- Undergraduate Thesis: \textit{Teleoperation of Robotic Manipulators applied to Laparoscopic Surgery.}
- 	\begin{itemize}
-\item Advisor: Dr. Carlos Perez del Pulgar. Grade: 9.5/10. 
- 	\end{itemize}
-}
 
 
 
@@ -172,8 +145,31 @@ Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \section{Experience}
-%\subsection{Research Experience}
-\cventry{\durationsince{Mar'22}}{Postdoctoral Researcher}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
+
+\newcommand*{\customcventry}[7][.25em]{%
+	\cvitem[#1]{#2}{%
+		{\bfseries#3}%
+%		\vspace{3mm}
+%		\hline
+%		\vspace{3mm}
+		\ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+		\ifthenelse{\equal{#5}{}}{}{, #5}%
+		\ifthenelse{\equal{#6}{}}{}{, #6}%
+		\ifthenelse{\equal{#3#4#5#6}{}}{}{.\strut}%
+		\ifx&#7&%
+		\else{\ifthenelse{\equal{#3#4#5#6}{}}{}{\newline{}}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+
+
+\cventry{\durationsince{Jul'22}}{Postdoctoral Research Fellow}{\location{Dyson Robotics Lab, Imperial College London}}{}{}{
+	\begin{itemize}
+		\item Research on parallel and distributed on-pixel processing for visual SLAM.
+		\item Explore implicit map representations for self-supervised semantic scene understanding.
+		\item Supervisor: Prof. Dr. Andrew Davison.
+	\end{itemize}
+}
+
+\cventry{\duration{Mar'22}{Jun'22}}{Postdoctoral Researcher}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
 	\begin{itemize}
 		\item Research on asynchronous, event-driven algorithms for visual SLAM using event cameras.
 		\item Designing of decentralized multi-agent visual SLAM architecture using distributed processing.
@@ -210,7 +206,7 @@ Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
 \cventry{\duration{Jun'15}{Feb'16}}{Research Assistant Intern}{\location{Institute of Robotics and Industrial Informatics (IRI-CSIC)}}{}{}{
 	\begin{itemize}
 		\item Design of path planning algorithms for UAVs embedding the experience of expert pilots.
-		\item Accepted paper in the International Conference on Intelligent Robots and Systems (IROS 2016).
+		%\item Accepted paper in the International Conference on Intelligent Robots and Systems (IROS 2016).
 		\item Supervisor: Prof. Dr. Alberto Sanfeliu.
 	\end{itemize}
 }{
@@ -248,12 +244,44 @@ Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
 %\cventry{05/2012 09/2011}{Member of Student's Group UMA TROTA Electric}{}{}{}{\textit{Department of of Electronics. University of Malaga (UMA)}\\ Evaluation of control strategies applied to electric powered vehicles for competition.}{}
 
 
+\section{Education}
+
+
+\cventry{\small{2022}}{Ph.D. in Computer Vision}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{ 
+	%Asynchronous Event-based SLAM for Real-Time Robotic Applications.
+	Thesis: \textit{Event-driven Feature Detection and Tracking for Visual SLAM}.
+	\begin{itemize}
+		\item 	Advisor: Prof. Dr. Margarita Chli.
+		\item Examiners: Prof. Dr. Andrew Davison, Prof. Dr. Davide Scaramuzza, Prof. Dr. Laurent Kneip.
+	\end{itemize}
+}
+
+\cventry{\small{2016}}{M.Sc. Automatic Control and Robotics}{\location{Polytechnic University of Catalonia (UPC)}}{}{}{
+	Top student in Master's program (2014-2016), GPA -- 8.70/10.\\
+	Thesis: \textit{Path planning for MAVs with vision in the loop.}
+	\begin{itemize}
+		\item 	Advisor: Prof. Dr. Margarita Chli. Grade: 5.75/6. ETH Z\"urich -- International student exchange.
+		%\item 	Accepted as a paper in the \textit{International Conference on Robotics and Automation}  (ICRA 2017).
+	\end{itemize}
+}
+
+\cventry{\small{2014}}{B.Sc. Industrial Engineering}{\location{University of Malaga (UMA)}}{}{}{Top student in Bachelor's program (2010-2014). GPA -- 8.49/10.\\
+	Thesis: \textit{Teleoperation of Robotic Manipulators applied to Laparoscopic Surgery.}
+	\begin{itemize}
+		\item Advisor: Dr. Carlos Perez del Pulgar. Grade: 9.5/10. 
+	\end{itemize}
+}
+
+
+
+
 \section{Research and Dissemination Activities}
 
 \cventry{\durationsince{2016}}{Supervision of Students and Researchers}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
 	\begin{itemize}
 	\item Supervised over 25 graduate student projects.
-\item Currently supervising other researchers on continuous-time SLAM and decentralized visual SLAM.
+%\item Currently supervising other researchers on continuous-time SLAM and decentralized visual SLAM.
+\item Shared supervision of doctoral students on SLAM, scene understanding and 3D geometry.
 	\end{itemize}
 }
 
@@ -299,7 +327,7 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 \vfill
 \section{Skills}
-\cvitem{Programming}{C++, \textsc{Matlab}, Python, C\#, \textsc{Simulink}, \LaTeX}
+\cvitem{Programming}{Python, C++, \textsc{Matlab}, C\#, \textsc{Simulink}, \LaTeX}
 \cvitem{Frameworks} {PyTorch, ROS, Unity, OpenCV, Unreal Engine, Gazebo, Git}
 %\cvitem{Machine Learning}{Pytorch,Tensorflow}
 %\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
@@ -319,7 +347,15 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 \section{Peer-reviewed Publications}
 
 %\publication{C8}{	\myuline{I. Alzugaray}$^{*}$, A. Schneebeli$^{*}$, R. Mascaro, A. Sabater, A.C. Murillo and M. Chli}{Graph Neural Networks for Corner Detection with Event Cameras}{\icra}{2022}{\textit{Under Review.}}
+
+
+\subsection{Doctoral Thesis}
+\publication{\httplink[\color{blue}T]{https://www.research-collection.ethz.ch/handle/20.500.11850/541700}}{\myuline{I. Alzugaray}}{Event-driven Feature Detection and Tracking for Visual SLAM}{ETH Zurich}{2022}{}
+
+
 \subsection{Journals}
+\publication{\httplink[\color{blue}J3]{https://ieeexplore.ieee.org/document/9772323}}{D. Hug, P. B{\"a}nninger, \myuline{I. Alzugaray} and M. Chli}{Continuous-Time Stereo-Inertial Odometry}{\ral}{2022}{}
+
 \publication{\httplink[\color{blue}J2]{doi.org/10.1016/j.ymssp.2020.106905}}{Z. Lai, \myuline{I. Alzugaray}, M. Chli and E. Chatzi}{Full-field structural monitoring using event cameras and physics-informed sparse identification}{Mechanical Systems and Signal Processing}{2020}{}
 
 \publication{\httplink[\color{blue}J1]{doi.org/10.3929/ethz-b-000277131}}{\myuline{I. Alzugaray} and M. Chli}{Asynchronous Corner Detection and Tracking for Event Cameras in Real Time}{\ral}{2018}{}
