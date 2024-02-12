@@ -47,8 +47,9 @@
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
 %\address{B\"ulachstrasse 3, Z\"urich 8057, Switzerland}{Birthdate: 10/11/1992 | Nationality: Spanish}
-\address{Birthdate: 10/11/1992 | Nationality: Spanish}{Z\"urich, Switzerland}
-\mobile{+41(0)765124418}
+%\address{Birthdate: 10/11/1992 | Nationality: Spanish}{Z\"urich, Switzerland}
+\address{Birthdate: 10/11/1992 | Nationality: Spanish}{London, United Kingdom}
+%\mobile{+41(0)765124418}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
 \email{alzugaray.ign@gmail.com}
@@ -164,7 +165,7 @@
 \cventry{\durationsince{Jul'22}}{Postdoctoral Research Fellow}{\location{Dyson Robotics Lab, Imperial College London}}{}{}{
 	\begin{itemize}
 		\item Research on parallel and distributed on-pixel processing for visual SLAM.
-		\item Explore implicit map representations for self-supervised semantic scene understanding.
+		\item Research on 3D implicit representations for self-supervised scene understanding.
 		\item Supervisor: Prof. Dr. Andrew Davison.
 	\end{itemize}
 }
@@ -178,15 +179,16 @@
 }
 
 
-\cventry{\duration{Sep'21}{Dec'21}}{Research Scientist Intern}{\location{Facebook/Meta Reality Labs}}{}{}{
+\cventry{\duration{Sep'21}{Jun'22}}{Research Scientist}{\location{Facebook/Meta Reality Labs}}{}{}{
 	\begin{itemize}
 		\item Designing of a NeRF-based pipeline for image-based visual relocalization.
 		\item PyTorch implementation trained with real egocentric footage for AR applications.
+		\item Intern position during Sept'21-Dec'21. External contractor position during Mar'22-Jun'22.				
 		\item Supervisor: Dr. Vasileios Balntas.
 	\end{itemize}
 }{}
 
-\cventry{\duration{Sep'19}{Dec'19}}{Software Engineer Intern}{\location{Disney Research Zurich}}{}{}{
+\cventry{\duration{Sep'19}{Jun'19}}{Software Engineer Intern}{\location{Disney Research Zurich}}{}{}{
 	\begin{itemize}
 		\item Development of VR animation tools with hand tracking and gesture recognition within Unity.
 		\item Close collaboration with Disney Animation Studio on \httplink[\color{blue}PoseVR project]{www.disneyanimation.com/technology/posevr/}.
@@ -213,14 +215,13 @@
 }
 
 
-\cventry{\duration{Oct'13}{Jul'14}}{Undergraduate Research Assistant}{\location{
-		Instituto Andaluz de Autom\'atica Avanzada y Rob\'otica}}{}{}{
-	\begin{itemize}
-	\item Design of trajectory control algorithms for robotic manipulators applied to laparoscopic surgery.
-	\item Supervisor: Dr. Carlos Perez del Pulgar.
-\end{itemize}
-}{
-}
+%\cventry{\duration{Oct'13}{Jul'14}}{Undergraduate Research Assistant}{\location{ 		Instituto Andaluz de Autom\'atica Avanzada y Rob\'otica}}{}{}{
+%	\begin{itemize}
+%	\item Design of trajectory control algorithms for robotic manipulators applied to laparoscopic surgery.
+%	\item Supervisor: Dr. Carlos Perez del Pulgar.
+%\end{itemize}
+%}{
+%}
 
 
 %\subsection{Teaching Experience}
@@ -277,7 +278,7 @@
 
 \section{Research and Dissemination Activities}
 
-\cventry{\durationsince{2016}}{Supervision of Students and Researchers}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
+\cventry{\durationsince{2016}}{Supervision of Students and Researchers}{\location{ETH Z\"urich / Imperial College London}}{}{}{
 	\begin{itemize}
 	\item Supervised over 25 graduate student projects.
 %\item Currently supervising other researchers on continuous-time SLAM and decentralized visual SLAM.
@@ -327,8 +328,9 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 \vfill
 \section{Skills}
-\cvitem{Programming}{Python, C++, \textsc{Matlab}, C\#, \textsc{Simulink}, \LaTeX}
-\cvitem{Frameworks} {PyTorch, ROS, Unity, OpenCV, Unreal Engine, Gazebo, Git}
+\cvitem{Programming}{Python, C++, CUDA, \textsc{Matlab}, C\#, \textsc{Simulink}, \LaTeX}
+\cvitem{Frameworks} {PyTorch,OpenCV, ROS, Unity, Unreal Engine, Gazebo, Git}
+\cvitem{Technologies}{NeRFs, Gaussian Splatting, Diffusion Models, Gaussian Belief Propagation}
 %\cvitem{Machine Learning}{Pytorch,Tensorflow}
 %\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
 
@@ -350,11 +352,14 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 
 \subsection{Doctoral Thesis}
-\publication{\httplink[\color{blue}T]{https://www.research-collection.ethz.ch/handle/20.500.11850/541700}}{\myuline{I. Alzugaray}}{Event-driven Feature Detection and Tracking for Visual SLAM}{ETH Zurich}{2022}{}
+\publication{\httplink[\color{blue}T]{www.research-collection.ethz.ch/handle/20.500.11850/541700}}{\myuline{I. Alzugaray}}{Event-driven Feature Detection and Tracking for Visual SLAM}{ETH Zurich}{2022}{}
 
 
 \subsection{Journals}
-\publication{\httplink[\color{blue}J3]{https://ieeexplore.ieee.org/document/9772323}}{D. Hug, P. B{\"a}nninger, \myuline{I. Alzugaray} and M. Chli}{Continuous-Time Stereo-Inertial Odometry}{\ral}{2022}{}
+\publication{\httplink[\color{blue}J4]{arxiv.org/abs/2401.15036}}{
+	R. Murai, \myuline{I. Alzugaray}, P.H.J. Kelly, A.J. Davison}{Distributed Simultaneous Localisation and Auto-Calibration using Gaussian Belief Propagation}{\ral}{ 2024}{}
+
+\publication{\httplink[\color{blue}J3]{doi.org/10.3929/ethz-b-000549482}}{D. Hug, P. B{\"a}nninger, \myuline{I. Alzugaray} and M. Chli}{Continuous-Time Stereo-Inertial Odometry}{\ral}{2022}{}
 
 \publication{\httplink[\color{blue}J2]{doi.org/10.1016/j.ymssp.2020.106905}}{Z. Lai, \myuline{I. Alzugaray}, M. Chli and E. Chatzi}{Full-field structural monitoring using event cameras and physics-informed sparse identification}{Mechanical Systems and Signal Processing}{2020}{}
 
@@ -362,6 +367,23 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 
 \subsection{Conferences}
+
+
+\publication{\httplink[\color{blue}C11]{www.robot-learning.uk/dream2real}}{
+	I. Kapelyukh, Y. Ren, \myuline{I. Alzugaray}, E. Johns}{Dream2Real: Zero-Shot 3D Object Rearrangement
+	with Vision-Language Models}{\icra}{Yokohama, 2024}{}
+
+\publication{\httplink[\color{blue}C10]{marwan99.github.io/Fit-NGP/}}{
+	 M. Taher  \myuline{I. Alzugaray}, A.J. Davison}{Fit-NGP: Fitting Object Models to Neural Graphics Primitives }{\icra}{Yokohama, 2024}{}
+
+
+\publication{\httplink[\color{blue}C9]{ieeexplore.ieee.org/document/10160941}}{
+P. B{\"a}nninger,  \myuline{I. Alzugaray}, M. Karrer, M. Chli}{Cross-Agent Relocalization for Decentralized Collaborative SLAM}{\icra}{London, 2023}{}
+
+
+\publication{\httplink[\color{blue}C8]{arxiv.org/abs/2303.02672}}{C. Le Gentil, \myuline{I. Alzugaray}, T. Vidal-Calleja}{Continuous-Time Gaussian Process Motion-Compensation for Event-Vision Pattern Tracking with Distance Fields}{\icra}{London, 2023}{}
+
+
 \publication{\httplink[\color{blue}C7]{www.bmvc2020-conference.com/conference/papers/paper_0744.html}}{\myuline{I. Alzugaray} and M. Chli}{{HASTE}: multi-Hypothesis Asynchronous Speeded-up Tracking of Events}{\bmvc}{Virtual, 2020}{}
 
 
@@ -382,6 +404,7 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 
 \publication{\httplink[\color{blue}C2]{doi.org/10.3929/ethz-a-010862339}}{\myuline{I. Alzugaray}, L. Texeira and M. Chli}{Short-term UAV Path-Planning with Monocular-Inertial SLAM in the Loop}{\icra}{Singapore, 2017}{}
+
 
 \publication{\httplink[\color{blue}C1]{www.iri.upc.edu/files/scidoc/1779-Learning-the-Hidden-Human-Knowledge-of-UAV-Pilots-when-navigating-in-a-cluttered-environment-for-improving-Path-Planning.pdf}}{\myuline{I. Alzugaray} and A. Sanfeliu}{Learning the Hidden Human Knowledge of UAV Pilots when navigating in a cluttered environment for improving Path Planning}{\iros}{Daejeon, Korea, 2016}{}
 
