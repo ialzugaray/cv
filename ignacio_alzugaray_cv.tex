@@ -27,7 +27,7 @@
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 \usepackage{color}
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'$
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
@@ -48,7 +48,7 @@
 \title{Curriculum Vitae}
 %\address{B\"ulachstrasse 3, Z\"urich 8057, Switzerland}{Birthdate: 10/11/1992 | Nationality: Spanish}
 %\address{Birthdate: 10/11/1992 | Nationality: Spanish}{Z\"urich, Switzerland}
-\address{Birthdate: 10/11/1992 | Nationality: Spanish}{Location: London, United Kingdom}
+%\address{}{}
 %\mobile{+41(0)765124418}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
@@ -57,7 +57,8 @@
 \homepage{ialzugaray.github.io/}{Webpage: ialzugaray.github.io} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
-
+\extrainfo{\\Residence: London, United Kingdom \\ Nationality: Spanish, born 1992}
+%\\CV Last Updated: \today}
 
 
 \usepackage{contour}
@@ -146,6 +147,17 @@
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
+\section{Research Interest}
+\begin{itemize}
+
+	\item \textbf{Efficient Neural SLAM \& Novel Scene Representations:}
+	{\small To explore hybrid approaches integrating traditional geometry with AI-driven modules, focusing on real-time performance and enhanced scene understanding.}
+	
+	
+	\item \textbf{Information-guided, Data-Efficient \& Decentralized Spatial AI:} {\small To design distributed systems and agents that reason about space, motion, and action while minimizing communication and computational overhead.} % Sparse
+	\item \textbf{Self-supervised and Explainable AI from Large Foundation Models:} {\small To extract and repurpose the knowledge from large pre-trained models for interpretable and generalizable AI solutions.}	
+\end{itemize}
+
 \section{Experience}
 
 \newcommand*{\customcventry}[7][.25em]{%
@@ -185,7 +197,7 @@
 		\item Designing of a NeRF-based pipeline for image-based visual relocalization.
 		\item PyTorch implementation trained with real egocentric footage for AR applications.
 		\item Intern position during Sept'21-Dec'21. External contractor position during Mar'22-Jun'22.				
-		\item Supervisor: Dr. Vasileios Balntas and Dr. Armen Avetisyan.
+		\item Supervisors: Dr. Vasileios Balntas and Dr. Armen Avetisyan.
 	\end{itemize}
 }{}
 
@@ -280,30 +292,34 @@
 \section{Research and Dissemination Activities}
 
 
+\subsection{Chairing}
 \cvitem{\eventdata{Oct'24}}{\textbf{Session Chair} for \textit{Multi-Robot Systems III}, Oral Session,  IROS'24}
 
 \cvitem{\eventdata{May'24}}{\textbf{Session Chair} for \textit{Perception for Grasping and Manipulation III}, Oral Session,  ICRA'24}
 
 
+\subsection{Invited Talks \& Workshops}
+\cvitem{\eventdata{Oct'21}}{\textbf{Invited Talk} at the \httplink[Robotic and Perception Group]{rpg.ifi.uzh.ch/}, ETH Zurich / University of Zurich. Presentation title: ``Event-Driven Feature Detection and Tracking for Robotic Applications.''}
+
+\cvitem{\eventdata{Jun'21}}{\textbf{Invited Speaker} at the \textit{Event-based Vision} workshop, CVPR 2021. Presentation title: ``Towards Asynchronous SLAM with Event Cameras.''}
+\cvitem{\eventdata{Oct'18}}{\textbf{Invited Speaker} at the \textit{Unconventional Sensing and Processing for Robotic Visual Perception} workshop, IROS 2018. Presentation title: ``Asynchronous Vision.''}
+
+\subsection{Others}
+\cventry{\eventdata{May'25}}{External PhD. Thesis Examiner}{}{\location{Institute of Robotics and Industrial Informatics (IRI-CSIC)}}{}{Thesis: ``Bio-inspired Event-driven Intelligence for Motion Estimation'' by Yi Tian.}{}
 \cventry{\durationsince{2016}}{Supervision of Students and Researchers}{\location{ETH Z\"urich / Imperial College London}}{}{}{
 	\begin{itemize}
-	\item Supervised over 30 graduate student projects.
+	\item Supervised over 35 graduate student projects.
 %\item Currently supervising other researchers on continuous-time SLAM and decentralized visual SLAM.
 \item Shared supervision of doctoral students on SLAM, scene understanding and 3D geometry.
 	\end{itemize}
 }
 
-\cventry{\durationsince{2016}}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, CVPR, MVA, RSS, T-RO, T-PAMI, RA-L, IJCV.}{}
+\cventry{\durationsince{2016}}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, ECCV, ICCV, CVPR, MVA, RSS, T-RO, T-PAMI, RA-L, IJCV.}{}
 
 
-\cvitem{\eventdata{Oct'21}}{\textbf{Invited Talk} at the \httplink[Robotic and Perception Group]{rpg.ifi.uzh.ch/}, ETH Zurich / University of Zurich. Presentation title: ``Event-Driven Feature Detection and Tracking for Robotic Applications.''}
-
-\cvitem{\eventdata{Jun'21}}{\textbf{Invited Speaker} at the \textit{Event-based Vision} workshop, CVPR 2021. Presentation title: ``Towards Asynchronous SLAM with Event Cameras.''}
-\cvitem{\eventdata{Oct'18}}{\textbf{Invited Speaker} at the \textit{Unconventional Sensing and Processing for Robotic Visual Perception} workshop, IROS 2018. Presentation title: ``Asynchronous Vision.''}
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
-\vfill
 \section{Awards and Scholarships}
 
 
@@ -321,12 +337,12 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 \cventry{\small{2014}}{Award for Academic Performance in Bacherlor's}{\location{University of Malaga (UMA)}}{}{}{ Granted to the top performing student in undergraduate programme (2010--2014).}{
 }
 
-\cventry{\small{2013}}{Undergraduate Research Scholarship}{\location{University of Malaga, Spanish Ministry of Education}}{}{}{	 Nationally competitive six-months scholarship to conduct short research projects.}{}
+\cventry{\small{2013}}{Undergraduate Research Scholarship}{\location{University of Malaga, Spanish Ministry of Education}}{}{}{	 Nationally competitive scholarship to conduct six-months research projects.}{}
 
 
 %\section{Skills}
 %\cvitem{Languages}{\textbf{Spanish:} Native \hfill \textbf{English:} Professional Proficiency \hfill \textbf{German:} Basic}
-\vfill
+\newpage
 \section{Languages}
 \cvitemwithcomment{Spanish}{Native}{}
 \cvitemwithcomment{English}{Professional Proficiency}{B2.2 University of Cambridge (2013)}
@@ -336,8 +352,8 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 \vfill
 \section{Skills}
 \cvitem{Programming}{Python, C++, CUDA, \textsc{Matlab}, C\#, \textsc{Simulink}, \LaTeX}
-\cvitem{Frameworks} {PyTorch,OpenCV, ROS, Unity, Unreal Engine, Gazebo, Git}
-\cvitem{Technologies}{NeRFs, Gaussian Splatting, Diffusion Models, Gaussian Belief Propagation}
+\cvitem{Frameworks} {PyTorch, OpenCV, ROS, Unity, Unreal Engine, Gazebo, Blender, Git}
+\cvitem{Technologies}{NeRFs, Gaussian Splatting, Diffusion Models, Gaussian Belief Propagation, ADMM}
 %\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
 
 
@@ -350,34 +366,18 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 \cventry{\small{2019}}{Arc*: Event-driven Corner-Event detector}{}{in C++/ROS}{}{\url{github.com/ialzugaray/arc_star_ros}}{
 }
 
-\newpage
-
 \section{Publications}
 
 %\publication{C8}{	\myuline{I. Alzugaray}$^{*}$, A. Schneebeli$^{*}$, R. Mascaro, A. Sabater, A.C. Murillo and M. Chli}{Graph Neural Networks for Corner Detection with Event Cameras}{\icra}{2022}{\textit{Under Review.}}
 
 
-\subsection{Doctoral Thesis}
-\publication{\httplink[\color{blue}T]{www.research-collection.ethz.ch/handle/20.500.11850/541700}}{\myuline{I. Alzugaray}}{Event-driven Feature Detection and Tracking for Visual SLAM}{ETH Zurich}{2022}{}
-
-
-\subsection{Journals}
-\publication{\httplink[\color{blue}J4]{arxiv.org/abs/2401.15036}}{
-	R. Murai, \myuline{I. Alzugaray}, P.H.J. Kelly, A. Davison}{Distributed Simultaneous Localisation and Auto-Calibration using Gaussian Belief Propagation}{\ral}{ 2024}{}
-
-\publication{\httplink[\color{blue}J3]{doi.org/10.3929/ethz-b-000549482}}{D. Hug, P. B{\"a}nninger, \myuline{I. Alzugaray} and M. Chli}{Continuous-Time Stereo-Inertial Odometry}{\ral}{2022}{}
-
-\publication{\httplink[\color{blue}J2]{doi.org/10.1016/j.ymssp.2020.106905}}{Z. Lai, \myuline{I. Alzugaray}, M. Chli and E. Chatzi}{Full-field structural monitoring using event cameras and physics-informed sparse identification}{Mechanical Systems and Signal Processing}{2020}{}
-
-\publication{\httplink[\color{blue}J1]{doi.org/10.3929/ethz-b-000277131}}{\myuline{I. Alzugaray} and M. Chli}{Asynchronous Corner Detection and Tracking for Event Cameras in Real Time}{\ral}{2018}{}
-
 
 \subsection{Conferences \& Workshops}
 
-\publication{\httplink[\color{blue}C13]{https://arxiv.org/abs/2406.09726}}{
+\publication{\httplink[\color{blue}C13]{arxiv.org/abs/2406.09726}}{
 	\myuline{I. Alzugaray}, R. Murai, A. Davison}{PixRO: Pixel-Distributed Rotational Odometry with Gaussian Belief Propagation}{\CVPR, International Workshop on Computational Cameras and Displays (CCD)}{Seattle, 2024}{}
 
-\publication{\httplink[\color{black}C12]{}}{
+\publication{\httplink[\color{blue}C12]{www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04347.pdf}}{
 D. Hug, \myuline{I. Alzugaray}, M. Chli}{Hyperion – A fast, versatile symbolic Gaussian Belief Propagation framework for Continuous-Time SLAM}{\ECCV}{Milan, 2024}{}
 
 \publication{\httplink[\color{blue}C11]{www.robot-learning.uk/dream2real}}{
@@ -419,6 +419,29 @@ P. B{\"a}nninger,  \myuline{I. Alzugaray}, M. Karrer, M. Chli}{Cross-Agent Reloc
 
 \publication{\httplink[\color{blue}C1]{www.iri.upc.edu/files/scidoc/1779-Learning-the-Hidden-Human-Knowledge-of-UAV-Pilots-when-navigating-in-a-cluttered-environment-for-improving-Path-Planning.pdf}}{\myuline{I. Alzugaray} and A. Sanfeliu}{Learning the Hidden Human Knowledge of UAV Pilots when navigating in a cluttered environment for improving Path Planning}{\iros}{Daejeon, Korea, 2016}{}
 
+
+
+
+\subsection{Journals}
+
+\publication{\httplink[\color{blue}J5]{doi.org/10.1007/s10846-025-02223-6}}{
+	L. Yang, R. Mascaro, \myuline{I. Alzugaray}, S.M. Prakhya, M. Karrer, Z. Liu, M. Chli}
+{LiDAR Loop Closure Detection using Semantic Graphs with Graph
+	Attention Networks}
+{Journal of Intelligent \& Robotic Systems}{2025}{}
+
+
+\publication{\httplink[\color{blue}J4]{arxiv.org/abs/2401.15036}}{
+	R. Murai, \myuline{I. Alzugaray}, P.H.J. Kelly, A. Davison}{Distributed Simultaneous Localisation and Auto-Calibration using Gaussian Belief Propagation}{\ral}{ 2024}{}
+
+\publication{\httplink[\color{blue}J3]{doi.org/10.3929/ethz-b-000549482}}{D. Hug, P. B{\"a}nninger, \myuline{I. Alzugaray} and M. Chli}{Continuous-Time Stereo-Inertial Odometry}{\ral}{2022}{}
+
+\publication{\httplink[\color{blue}J2]{doi.org/10.1016/j.ymssp.2020.106905}}{Z. Lai, \myuline{I. Alzugaray}, M. Chli and E. Chatzi}{Full-field structural monitoring using event cameras and physics-informed sparse identification}{Mechanical Systems and Signal Processing}{2020}{}
+
+\publication{\httplink[\color{blue}J1]{doi.org/10.3929/ethz-b-000277131}}{\myuline{I. Alzugaray} and M. Chli}{Asynchronous Corner Detection and Tracking for Event Cameras in Real Time}{\ral}{2018}{}
+
+\subsection{Doctoral Thesis}
+\publication{\httplink[\color{blue}T]{www.research-collection.ethz.ch/handle/20.500.11850/541700}}{\myuline{I. Alzugaray}}{Event-driven Feature Detection and Tracking for Visual SLAM}{ETH Zurich}{2022}{}
 
 
 
