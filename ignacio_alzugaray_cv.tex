@@ -52,12 +52,12 @@
 %\mobile{+41(0)765124418}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
-\email{Email: alzugaray.ign@gmail.com}
+\email{alzugaray.ign@gmail.com}
 
-\homepage{ialzugaray.github.io/}{Webpage: ialzugaray.github.io} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+\homepage{ialzugaray.github.io/}{ialzugaray.github.io} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 %\quote{"A witty and playful quotation" - John Smith}
-\extrainfo{\\Residence: London, United Kingdom \\ Nationality: Spanish, born 1992}
+\extrainfo{\\ London, United Kingdom \\ Spanish, born 1992}
 %\\CV Last Updated: \today}
 
 
@@ -147,85 +147,102 @@
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\section{Research Interests}
-\begin{itemize}
-
-	\item \textbf{Efficient Neural SLAM \& Novel Scene Representations:}
-	{\small To explore hybrid approaches integrating traditional geometry with AI-driven modules, focusing on real-time performance and enhanced scene understanding.}
-	
-	
-	\item \textbf{Information-guided, Data-Efficient \& Decentralized Spatial AI:} {\small To design distributed systems and agents that reason about space, motion, and action while minimizing communication and computational overhead.} % Sparse
-	\item \textbf{Self-supervised and Explainable AI from Large Foundation Models:} {\small To extract and repurpose the knowledge from large pre-trained models for interpretable and generalizable AI solutions.}	
-\end{itemize}
-
+\vspace{-1.5cm}
 \section{Experience}
 
-\newcommand*{\customcventry}[7][.25em]{%
-	\cvitem[#1]{#2}{%
-		{\bfseries#3}%
-%		\vspace{3mm}
-%		\hline
-%		\vspace{3mm}
-		\ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
-		\ifthenelse{\equal{#5}{}}{}{, #5}%
-		\ifthenelse{\equal{#6}{}}{}{, #6}%
-		\ifthenelse{\equal{#3#4#5#6}{}}{}{.\strut}%
-		\ifx&#7&%
-		\else{\ifthenelse{\equal{#3#4#5#6}{}}{}{\newline{}}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+\newlength{\colsep}
+\setlength{\colsep}{0.0cm} % <-- adjust this for spacing between columns
 
 
-
-\cventry{\durationsince{Jul'22}}{Postdoctoral Research Fellow}{\location{Dyson Robotics Lab, Imperial College London}}{}{}{
-	\begin{itemize}
-		\item Research on parallel and distributed on-pixel processing for visual SLAM.
-		\item Research on 3D implicit representations for self-supervised scene understanding.
-		\item Supervisor: Prof. Dr. Andrew Davison.
-	\end{itemize}
-}
-
-\cventry{\duration{Mar'22}{Jun'22}}{Postdoctoral Researcher}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
-	\begin{itemize}
-		\item Research on asynchronous, event-driven algorithms for visual SLAM using event cameras.
-		\item Designing of decentralized multi-agent visual SLAM architecture using distributed processing.
-		\item Supervisor: Prof. Dr. Margarita Chli.
-	\end{itemize}
+\newcommand{\WorkExperience}[6]{%
+	\noindent
+	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r p{0.85\textwidth}}
+		%{\footnotesize #1} & \textbf{#4} \hfill {\footnotesize Ref: #6}\\
+		{\footnotesize #1} & \textbf{#4}\\
+		& \textit{\small #2}\hfill{\footnotesize #3}%\hfill \textit{\small #4}
+		{\small 
+			\begin{itemize}
+				#5
+			\end{itemize}{\footnotesize Ref: #6}}
+	\end{tabular*}%
+	%\vspace{0.20cm}
+	\vspace{0.1cm}
 }
 
 
-\cventry{\duration{Sep'21}{Jun'22}}{Research Scientist}{\location{Facebook/Meta Reality Labs}}{}{}{
-	\begin{itemize}
-		\item Designing of a NeRF-based pipeline for image-based visual relocalization.
-		\item PyTorch implementation trained with real egocentric footage for AR applications.
-		\item Intern position during Sept'21-Dec'21. External contractor position during Mar'22-Jun'22.				
-		\item Supervisors: Dr. Vasileios Balntas and Dr. Armen Avetisyan.
-	\end{itemize}
-}{}
+\WorkExperience
+	{Since Jul'22}
+	{Dyson Robotics Lab, Imperial College London}
+	{London, UK}
+	{Postdoctoral Research Fellow}
+	{
+		\item Developed implicit 3D scene representations to be applied in efficient, multi-agent SLAM.
+		\item Implemented 6-DoF object tracking and reconstruction from 2D/3D foundational models.
+		\item Leveraged diffusion models for hierarchical segmentation and semantic keypoint matching.
+		\item Designed parallel and distributed 3D motion estimators for emerging sensor–processor hardware.
+	}
+	{Prof. Dr. Andrew Davison}
 
-\cventry{\duration{Sep'19}{Jun'19}}{Software Engineer Intern}{\location{Disney Research Zurich}}{}{}{
-	\begin{itemize}
-		\item Development of VR animation tools with hand tracking and gesture recognition within Unity.
-		\item Close collaboration with Disney Animation Studio on \httplink[\color{blue}PoseVR project]{www.disneyanimation.com/technology/posevr/}.
-		\item Supervisors: Dr. Jakob Buhmann and Dr. Martin Guay.
-	\end{itemize}
-	}{}
+\WorkExperience
+{Mar'22 -- Jun'22}
+{Vision for Robotics Lab (V4RL), ETH Z\"urich}
+{Zurich, Switzerland}
+{Postdoctoral Researcher}
+{
+		\item Created novel asynchronous, event-driven algorithms for visual SLAM using event cameras.
+		\item Explored the use of continuous-time spline-based representation in visual SLAM.
+		\item Designed decentralized multi-agent visual SLAM systems using distributed optimization.
+	}
+{Prof. Dr. Margarita Chli}
 
-
-\cventry{\duration{Sep'16}{Feb'17}}{Research Assistant}{\location{Vision for Robotics Lab (V4RL), ETH Z\"urich}}{}{}{
-	\begin{itemize}
-		\item Implementation of probabilistic event-based scene mapping.
-		\item Design of active monocular-inertial SLAM pipeline for UAVs.
-		\item Supervisor: Prof. Dr. Margarita Chli.
-	\end{itemize}
+\WorkExperience
+{Sep'21 -- Jun'22}
+{Facebook / Meta Reality Labs}
+{London, UK (Remote)}
+{Research Scientist}
+{
+\item Designed a NeRF-based pipeline for image-based visual relocalization.
+\item Trained the network distributively using large-scale data from real egocentric footage.
+\item Intern during Sept'21--Dec'21. External contractor during Mar'22--Jun'22.			
 }
+{Dr. Vasileios Balntas / Dr. Armen Avetisyan}
 
-\cventry{\duration{Jun'15}{Feb'16}}{Research Assistant Intern}{\location{Institute of Robotics and Industrial Informatics (IRI-CSIC)}}{}{}{
-	\begin{itemize}
-		\item Design of path planning algorithms for UAVs embedding the experience of expert pilots.
-		%\item Accepted paper in the International Conference on Intelligent Robots and Systems (IROS 2016).
-		\item Supervisor: Prof. Dr. Alberto Sanfeliu.
-	\end{itemize}
-}{
+
+\WorkExperience
+{Sep'19 -- Dec'19}
+{Disney Research Zurich}
+{Zurich, Switzerland}
+{Software Engineering Intern}
+{
+	\item Developed VR tools for 3D animation using hand tracking and gesture recognition within Unity.
+	\item Close collaboration with Disney Animation Studio on \httplink[\color{blue}PoseVR project]{www.disneyanimation.com/technology/posevr/}.	
 }
+{Dr. Jakob Buhmann / Dr. Martin Guay}
+
+
+\WorkExperience
+{Sep'16 -- Feb'17}
+{Vision for Robotics Lab (V4RL), ETH Z\"urich}
+{Zurich, Switzerland}
+{Research Assistant}
+{
+	\item Implemented a probabilistic event-based scene mapping and reconstruction algorithm.
+	\item Designed a path-planning system for active monocular-inertial SLAM applied to UAVs.
+}
+{Prof. Dr. Margarita Chli}
+
+%\WorkExperience
+%{Jun'15 -- Feb'16}
+%{Institute of Robotics and Industrial Informatics (IRI-CSIC)}
+%{Barcelona, Spain}
+%{Research Assistant}
+%{
+%	\item Designed of path planning algorithms for UAVs learning from demonstrations of expert pilots.	}
+%{Prof. Dr. Alberto Sanfeliu}
+
+
+
 
 
 %\cventry{\duration{Oct'13}{Jul'14}}{Undergraduate Research Assistant}{\location{ 		Instituto Andaluz de Autom\'atica Avanzada y Rob\'otica}}{}{}{
@@ -287,12 +304,25 @@
 }
 
 
+\section{Research Interests}
+\begin{itemize}
+	
+	\item \textbf{Efficient Neural SLAM \& Novel Scene Representations:}
+	{\small To explore hybrid approaches integrating traditional geometry with AI-driven modules, focusing on real-time performance and enhanced scene understanding.}
+	
+	
+	\item \textbf{Information-guided, Data-Efficient \& Decentralized Spatial AI:} {\small To design distributed systems and agents that reason about space, motion, and action while minimizing communication and computational overhead.} % Sparse
+	\item \textbf{Self-supervised and Explainable AI from Large Foundation Models:} {\small To extract and repurpose the knowledge from large pre-trained models for interpretable and generalizable AI solutions.}	
+\end{itemize}
 
 
 \section{Research and Dissemination Activities}
 
 
-\subsection{Chairing}
+\subsection{Chairing \& Editorial Board}
+\cvitem{\eventdata{Sep'25}}{\textbf{ICRA 2026 Associate Editor} in \textit{Visual Perception and Learning}}
+
+
 \cvitem{\eventdata{Oct'24}}{\textbf{Session Chair} for \textit{Multi-Robot Systems III}, Oral Session,  IROS'24}
 
 \cvitem{\eventdata{May'24}}{\textbf{Session Chair} for \textit{Perception for Grasping and Manipulation III}, Oral Session,  ICRA'24}
@@ -316,7 +346,7 @@
 	\end{itemize}
 }
 
-\cventry{\durationsince{2016}}{Reviewer of Scientific Publications}{}{}{}{ICRA, IROS, 3DV, BMVC, ECCV, ICCV, CVPR, MVA, RSS, T-RO, T-PAMI, RA-L, IJCV.}{}
+\cventry{\durationsince{2016}}{Reviewer of Scientific Publications}{}{}{}{CVPR, ECCV, ICCV, 3DV, BMVC, IJCV, T-PAMI, RSS, RA-L, T-RO, ICRA, IROS, MVA.}{}
 
 
 %----------------------------------------------------------------------------------------
@@ -346,7 +376,7 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 %\section{Skills}
 %\cvitem{Languages}{\textbf{Spanish:} Native \hfill \textbf{English:} Professional Proficiency \hfill \textbf{German:} Basic}
-\newpage
+
 \section{Languages}
 \cvitemwithcomment{Spanish}{Native}{}
 %\cvitemwithcomment{English}{Professional Proficiency}{B2.2 University of Cambridge (2013)}
@@ -356,9 +386,11 @@ Granted to the top performing student in postgraduate programme (2014--2016). Th
 
 \vfill
 \section{Skills}
-\cvitem{Programming}{Python, C++, CUDA, \textsc{Matlab}, C\#}
-\cvitem{Frameworks} {PyTorch, OpenCV, ROS, Unity, Unreal Engine, Gazebo, Blender, Git}
-\cvitem{Technologies}{Gaussian Belief Propagation, NeRFs, Gaussian Splatting, Diffusion Models, ADMM}
+\cvitem{Programming}{Python, C++, CUDA, \textsc{Matlab}}
+\cvitem{Frameworks} {PyTorch, OpenCV, ROS, Unity, Unreal Engine, Blender, Gazebo}
+\cvitem{Optimization}{GBP, Ceres, ADMM}
+\cvitem{ML}{Coordinate Regression, Deep Point Trackers, 3D Foundational Models, Diffusion Models}
+\cvitem{Graphics}{Gaussian Splatting, Triangle Splatting, NeRF, Instant-NGP}
 %\cvitem{Industrial}{NI LabView, Beckhoff TwinCAT, ARENA, St\"aubli VAL3, SolidEdge}
 
 
